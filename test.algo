@@ -1,0 +1,35 @@
+ALGORITHM checkpoint
+VAR
+    ch: CHAR;
+    length, words, vowels: INTEGER;
+BEGIN
+    length:= 0;
+    words:= 1;
+    vowels:= 0;
+
+    write("enter a sentence ending with a point :");
+    read(ch);
+    
+    WHILE (ch <> ".") DO
+        length:= length + 1;
+
+        IF (ch = " ") THEN
+            words:= words + 1;
+        END_IF
+
+    IF (ch = "a" OR ch = "A" OR
+            ch = "e" OR ch = "E" OR
+            ch = "i" OR ch = "I" OR
+            ch = "o" OR ch = "O" OR
+            ch = "u" OR ch = "U") THEN
+            vowels := vowels + 1;
+        END_IF;
+
+         read(ch)
+    END_WHILE
+    
+    write("length of the sentence: ", length);
+    write("number of words: ", words);
+    write("number of vowels: " vowels);
+
+END
